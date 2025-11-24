@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, Zap, Building2, Gauge, LineChart, CheckCircle2, Sparkles } from 'lucide-react'
+import { ArrowRight, Zap, Building2, FileSpreadsheet, LineChart, CheckCircle2, Sparkles, Eye, Target, Clock } from 'lucide-react'
 import { Button } from '@/components/Button'
 import { CalendlyButton } from '@/components/CalendlyButton'
 import { Container } from '@/components/Container'
@@ -20,27 +20,24 @@ export default function Home() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/40 text-purple-light text-sm font-medium">
               <Sparkles className="w-4 h-4" />
-              <span>Build · Automate · Amplify</span>
+              <span>Fast SME Digital Enablement</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-              We build the digital capability you don't have{' '}
-              <span className="gradient-text">
-                - or never knew you needed.
-              </span>{' '}
-              Fast.
+              We build the digital capability you do not have{' '}
+              <span className="gradient-text">- fast</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-              Don't get left behind by the AI revolution. We build what your business needs - quickly and without complexity.
+              Custom tools, automation, and dashboards for SMEs. Delivered in days using AI-assisted delivery. No spreadsheet chaos. No six-month projects.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <CalendlyButton size="lg" className="group">
-                Start with a free working prototype
+                Book free discovery
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </CalendlyButton>
               <Link href="/services">
@@ -49,166 +46,167 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
-
-            {/* Support line */}
-            <p className="text-sm text-foreground/50 pt-4">
-              Still running your business on spreadsheets? Let's fix that.
-            </p>
           </div>
         </Container>
       </section>
 
-      {/* Problem Section */}
-      <section className="py-20 md:py-32 bg-navy-light">
+      {/* Spreadsheet CTA Section */}
+      <section className="py-16 md:py-20 bg-navy-light border-y border-primary/20">
         <Container>
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="text-center space-y-6 animate-fade-in">
-              <h2 className="text-3xl md:text-5xl font-bold">
-                Most SMEs are being held back by{' '}
-                <span className="gradient-text">their own tools</span>
-              </h2>
-            </div>
-
-            <div className="grid gap-6 md:gap-8">
-              {[
-                "You're running core operations on spreadsheets and email threads.",
-                "Important information lives in people's heads, shared drives, or old systems.",
-                "Admin work eats time you should be spending on customers and growth.",
-                "You want to use AI and automation, but don't know where to start.",
-                "Agencies want big budgets, long timelines and vague \"transformation\" projects.",
-              ].map((problem, i) => (
-                <div
-                  key={i}
-                  className="flex items-start gap-4 p-6 rounded-2xl bg-card/50 backdrop-blur border border-border hover:border-primary/30 transition-all duration-300 animate-fade-in"
-                  style={{ animationDelay: `${i * 0.1}s` }}
-                >
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center mt-1">
-                    <div className="w-3 h-3 rounded-full bg-destructive" />
+          <div className="max-w-4xl mx-auto">
+            <div className="p-8 md:p-12 rounded-3xl bg-gradient-to-r from-purple/10 via-primary/10 to-purple/10 border border-primary/30 backdrop-blur">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                <div className="flex-shrink-0">
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-purple flex items-center justify-center">
+                    <FileSpreadsheet className="w-10 h-10 text-white" />
                   </div>
-                  <p className="text-lg text-foreground/80">{problem}</p>
                 </div>
-              ))}
-            </div>
-
-            <div className="text-center space-y-6 pt-8">
-              <p className="text-xl text-foreground/60">
-                Meanwhile, your competitors are getting faster, clearer and more automated.
-              </p>
-              <div className="max-w-3xl mx-auto p-8 rounded-3xl bg-gradient-to-r from-purple/10 to-primary/10 border border-primary/30">
-                <p className="text-2xl font-semibold">
-                  You don't need a six-month project.<br />
-                  You need <span className="gradient-text">the right tools, built fast, around the way you already work.</span>
-                </p>
+                <div className="flex-1 text-center md:text-left space-y-4">
+                  <h2 className="text-2xl md:text-3xl font-bold">
+                    Running your business on spreadsheets?
+                  </h2>
+                  <p className="text-lg text-foreground/70">
+                    Send us your worst one. We will show you what it could become.
+                  </p>
+                  <a
+                    href="mailto:spreadsheets@amplified.co.uk"
+                    className="inline-flex items-center gap-2 text-primary hover:text-primary-light transition-colors font-semibold"
+                  >
+                    <span>spreadsheets@amplified.co.uk</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* What We Do Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-navy to-navy-light relative overflow-hidden">
+      {/* Problems Section */}
+      <section className="py-20 md:py-32 bg-navy">
+        <Container>
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="text-center space-y-6">
+              <h2 className="text-3xl md:text-5xl font-bold">
+                Problems we solve <span className="gradient-text">for SMEs</span>
+              </h2>
+              <p className="text-xl text-foreground/60">
+                You might recognise these
+              </p>
+            </div>
+
+            <div className="grid gap-6">
+              {[
+                {
+                  title: 'Running everything on spreadsheets',
+                  description: 'Data everywhere, truth nowhere, constant firefighting.',
+                },
+                {
+                  title: 'No clear visibility of margin or performance',
+                  description: 'You cannot improve what you cannot see.',
+                },
+                {
+                  title: 'Admin is eating your day',
+                  description: 'Copy-paste, approvals, chasing people, updating files, re-entering data.',
+                },
+                {
+                  title: 'Systems that do not talk to each other',
+                  description: 'Double handling, mistakes, operational drag.',
+                },
+                {
+                  title: 'You do not know where AI genuinely fits',
+                  description: 'Everything sounds impressive but nothing feels practical.',
+                },
+              ].map((problem, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-4 p-6 rounded-2xl bg-card/50 backdrop-blur border border-border hover:border-primary/30 transition-all duration-300"
+                >
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-destructive/20 flex items-center justify-center mt-1">
+                    <div className="w-3 h-3 rounded-full bg-destructive" />
+                  </div>
+                  <div className="space-y-1">
+                    <h3 className="text-lg font-semibold">{problem.title}</h3>
+                    <p className="text-foreground/60">{problem.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center pt-8">
+              <p className="text-xl font-semibold gradient-text">
+                We fix all of this quickly and without disrupting your business.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Four Core Capabilities */}
+      <section className="py-20 md:py-32 bg-gradient-to-b from-navy-light to-navy relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple/10 rounded-full blur-3xl" />
 
         <Container className="relative z-10">
           <div className="max-w-6xl mx-auto space-y-16">
             <div className="text-center space-y-6">
               <h2 className="text-3xl md:text-5xl font-bold">
-                We build, automate and amplify<br />
-                <span className="gradient-text">the way your business runs</span>
+                What we do
               </h2>
+              <p className="text-xl text-foreground/60 max-w-3xl mx-auto">
+                We help SMEs diagnose, design, and deliver practical digital capability at speed
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Build */}
-              <div className="p-8 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 space-y-6 group">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-purple flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Building2 className="w-8 h-8 text-white" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {/* Mini ERP and Custom Tools */}
+              <div className="p-6 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 space-y-6 group">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-purple flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Building2 className="w-7 h-7 text-white" />
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">Build</h3>
-                  <p className="text-foreground/70">
-                    Websites, apps and internal tools that actually match how your business works.
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold">Mini ERP & Custom Tools</h3>
+                  <p className="text-foreground/70 text-sm leading-relaxed">
+                    Purpose-built systems for CRM, scheduling, quoting, job tracking, time tracking, stock, invoicing, or anything unique to your operations.
                   </p>
-                  <ul className="space-y-2 text-foreground/60">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Lightweight CRMs and mini-ERPs</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Job and workflow trackers</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Customer portals</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Operational dashboards</span>
-                    </li>
-                  </ul>
                 </div>
               </div>
 
-              {/* Automate */}
-              <div className="p-8 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 space-y-6 group">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-purple flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Zap className="w-8 h-8 text-white" />
+              {/* Websites, Apps, Portals */}
+              <div className="p-6 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 space-y-6 group">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-purple flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Target className="w-7 h-7 text-white" />
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">Automate</h3>
-                  <p className="text-foreground/70">
-                    We remove repetitive work and glue your existing tools together.
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold">Websites, Apps & Portals</h3>
+                  <p className="text-foreground/70 text-sm leading-relaxed">
+                    Modern, fast, mobile-friendly. Designed, built and deployed quickly with content you can update yourself.
                   </p>
-                  <ul className="space-y-2 text-foreground/60">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Automating manual admin and data entry</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Generating docs and reports automatically</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Simple AI assistants</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Smart notifications and reminders</span>
-                    </li>
-                  </ul>
                 </div>
               </div>
 
-              {/* Amplify */}
-              <div className="p-8 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 space-y-6 group">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-purple flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <LineChart className="w-8 h-8 text-white" />
+              {/* Automation */}
+              <div className="p-6 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 space-y-6 group">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-purple flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Zap className="w-7 h-7 text-white" />
                 </div>
-                <div className="space-y-4">
-                  <h3 className="text-2xl font-bold">Amplify</h3>
-                  <p className="text-foreground/70">
-                    We help you see and improve the whole picture.
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold">Automation & Workflow</h3>
+                  <p className="text-foreground/70 text-sm leading-relaxed">
+                    Turn repetitive work into automated workflows. Eliminate copy-paste, manual approvals, spreadsheet chaos, and operational drag.
                   </p>
-                  <ul className="space-y-2 text-foreground/60">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Clear visibility on jobs and throughput</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Simple views of margin and profitability</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Bottleneck and delay hotspots</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span>Automation opportunity mapping</span>
-                    </li>
-                  </ul>
+                </div>
+              </div>
+
+              {/* Dashboards */}
+              <div className="p-6 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-xl hover:shadow-primary/10 space-y-6 group">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary to-purple flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Eye className="w-7 h-7 text-white" />
+                </div>
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold">Dashboards & Visibility</h3>
+                  <p className="text-foreground/70 text-sm leading-relaxed">
+                    Real-time insight into margin, delivery, cost, performance, blockers and opportunity. Replace twenty spreadsheets with a single source of truth.
+                  </p>
                 </div>
               </div>
             </div>
@@ -216,38 +214,83 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* How It Works Section */}
+      {/* Why Choose Us */}
       <section className="py-20 md:py-32 bg-navy-light">
         <Container>
+          <div className="max-w-5xl mx-auto space-y-12">
+            <div className="text-center space-y-6">
+              <h2 className="text-3xl md:text-5xl font-bold">
+                Why SMEs choose <span className="gradient-text">Amplified Tech</span>
+              </h2>
+              <p className="text-xl text-foreground/60 max-w-2xl mx-auto">
+                Simple. Fast. Practical. No fluff. No corporate BS. No six-month discovery phases.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                'We discover the problem and build solutions in the same session',
+                'You get a working prototype before we leave the room',
+                'You only pay if you want to keep it',
+                'We use AI responsibly but do not let it hallucinate or over-engineer',
+                'We challenge assumptions and tell you the truth',
+                'We build your way - not force you into someone else framework',
+                'We focus on value, visibility and time saved',
+                'No retainers, long contracts, or hidden fees',
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-4 p-6 rounded-2xl bg-card/50 backdrop-blur border border-border hover:border-primary/30 transition-all duration-300"
+                >
+                  <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="text-lg text-foreground/80">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-20 md:py-32 bg-gradient-to-b from-navy to-navy-light relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple/5 via-transparent to-primary/5" />
+
+        <Container className="relative z-10">
           <div className="max-w-6xl mx-auto space-y-16">
             <div className="text-center space-y-6">
               <h2 className="text-3xl md:text-5xl font-bold">
                 How it works
               </h2>
               <p className="text-xl text-foreground/60 max-w-3xl mx-auto">
-                We keep this as simple and low-risk as possible.
+                We keep this as simple and low-risk as possible
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-4 gap-8">
               {[
                 {
                   step: '1',
-                  title: 'Free discovery session with a working prototype',
-                  description: 'We spend time with you to understand how the business actually runs, find the biggest sources of waste, and identify where a small tool could unlock big value.',
-                  highlight: 'You don\'t pay for this. If it\'s not useful, you walk away.',
+                  title: 'Free Discovery',
+                  description: 'We explore your business, map workflows, and identify the highest value opportunities. You get a working prototype in the session.',
+                  highlight: 'Free',
                 },
                 {
                   step: '2',
-                  title: 'Build in a week',
-                  description: 'We agree what we\'re going to build, what "good" looks like, and a fixed price. Then we build it - typically within a week.',
-                  highlight: 'No long project plans. Just a working system you can start using.',
+                  title: 'MVP in a Week',
+                  description: 'If you want it, we build a production version within days. Fixed price. Clear scope.',
+                  highlight: 'Fixed Price',
                 },
                 {
                   step: '3',
-                  title: 'Improve and extend with credits',
-                  description: 'Buy a block of credits and call off improvements when you\'re ready. Add new features, integrations or automations as your needs grow.',
-                  highlight: 'You stay in control of spend. We focus on changes that clearly improve your business.',
+                  title: 'Credits for More',
+                  description: 'Buy credits you can redeem anytime to add features, integrations or automations.',
+                  highlight: 'Your Pace',
+                },
+                {
+                  step: '4',
+                  title: 'You Stay in Control',
+                  description: 'No retainers. No long contracts. Just pay for value delivered when you need it.',
+                  highlight: 'No Lock-in',
                 },
               ].map((item, i) => (
                 <div key={i} className="space-y-6">
@@ -256,9 +299,9 @@ export default function Home() {
                   </div>
                   <div className="space-y-4">
                     <h3 className="text-xl font-bold">{item.title}</h3>
-                    <p className="text-foreground/70 leading-relaxed">{item.description}</p>
-                    <div className="p-4 rounded-xl bg-primary/10 border border-primary/20">
-                      <p className="text-sm text-primary-light font-medium">{item.highlight}</p>
+                    <p className="text-foreground/70 leading-relaxed text-sm">{item.description}</p>
+                    <div className="inline-block px-3 py-1 rounded-full bg-primary/20 border border-primary/40">
+                      <p className="text-sm text-primary-light font-semibold">{item.highlight}</p>
                     </div>
                   </div>
                 </div>
@@ -269,27 +312,29 @@ export default function Home() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-navy to-navy-light relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple/10 via-transparent to-primary/10" />
-
-        <Container className="relative z-10">
+      <section className="py-20 md:py-32 bg-navy-light">
+        <Container>
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-5xl font-bold">
-              Ready to stop running your business<br />
-              <span className="gradient-text">on spreadsheets?</span>
+              Ready to upgrade <span className="gradient-text">your business?</span>
             </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
               Get a free working prototype in 24 hours. No commitment. No pressure.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <CalendlyButton size="lg" className="group">
-                Start with a free working prototype
+                Book free discovery
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </CalendlyButton>
-              <CalendlyButton size="lg" variant="outline">
-                Book a short intro call
-              </CalendlyButton>
+              <Link href="/contact">
+                <Button size="lg" variant="outline">
+                  Send us your spreadsheet
+                </Button>
+              </Link>
             </div>
+            <p className="text-foreground/50 text-sm pt-4">
+              No credit card required. No sales pitch. Just value.
+            </p>
           </div>
         </Container>
       </section>
