@@ -1,13 +1,11 @@
+'use client'
+
 import { Mail, FileSpreadsheet, Phone, MapPin, HelpCircle, ArrowRight, Calendar, Clock } from 'lucide-react'
 import { Button } from '@/components/Button'
+import { CalendlyButton } from '@/components/CalendlyButton'
 import { Section } from '@/components/Section'
 import { Card } from '@/components/Card'
 import { Badge } from '@/components/Badge'
-
-export const metadata = {
-  title: 'Contact - Amplified Tech',
-  description: 'Let us make your business faster, clearer, and more capable - starting today.',
-}
 
 export default function ContactPage() {
   const contactOptions = [
@@ -16,7 +14,7 @@ export default function ContactPage() {
       title: 'Book a Free Discovery Session',
       description: 'Get a working prototype in 24 hours. No commitment. No pressure.',
       action: 'Book your free session',
-      email: 'contact@amplified.co.uk',
+      useCalendly: true,
       featured: true,
     },
     {
@@ -25,13 +23,14 @@ export default function ContactPage() {
       description: 'Running your business on Excel? Send us your worst one - we will show you what it could become.',
       action: 'Upload via email',
       email: 'spreadsheets@amplified.co.uk',
+      useCalendly: false,
     },
     {
       icon: Phone,
       title: 'Prefer to talk?',
       description: 'A quick call is sometimes easiest.',
       action: 'Book a 15-minute call',
-      email: 'call@amplified.co.uk',
+      useCalendly: true,
     },
   ]
 
@@ -76,15 +75,22 @@ export default function ContactPage() {
                   <h2 className="text-2xl md:text-3xl font-bold">{option.title}</h2>
                   <p className="text-lg text-foreground/70 leading-relaxed">{option.description}</p>
                   <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                    <div className="flex items-center gap-2 text-foreground/80">
-                      <span className="font-semibold">{option.action}:</span>
-                      <a
-                        href={`mailto:${option.email}`}
-                        className="text-primary hover:text-primary-light transition-colors underline"
-                      >
-                        {option.email}
-                      </a>
-                    </div>
+                    {option.useCalendly ? (
+                      <CalendlyButton size="md" className="group">
+                        {option.action}
+                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </CalendlyButton>
+                    ) : (
+                      <div className="flex items-center gap-2 text-foreground/80">
+                        <span className="font-semibold">{option.action}:</span>
+                        <a
+                          href={`mailto:${option.email}`}
+                          className="text-primary hover:text-primary-light transition-colors underline"
+                        >
+                          {option.email}
+                        </a>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -188,10 +194,10 @@ export default function ContactPage() {
             <div className="gradient-text">Get amplified.</div>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="group">
+            <CalendlyButton size="lg" className="group">
               Book your free discovery session
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            </CalendlyButton>
           </div>
           <p className="text-foreground/50 text-sm">
             No commitment required. No credit card. Just value.

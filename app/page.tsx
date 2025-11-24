@@ -1,6 +1,10 @@
+'use client'
+
 import { ArrowRight, Zap, Building2, Gauge, LineChart, CheckCircle2, Sparkles } from 'lucide-react'
 import { Button } from '@/components/Button'
+import { CalendlyButton } from '@/components/CalendlyButton'
 import { Container } from '@/components/Container'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -35,13 +39,15 @@ export default function Home() {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Button size="lg" className="group">
+              <CalendlyButton size="lg" className="group">
                 Start with a free working prototype
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button size="lg" variant="outline">
-                See what we can build
-              </Button>
+              </CalendlyButton>
+              <Link href="/services">
+                <Button size="lg" variant="outline">
+                  See what we can build
+                </Button>
+              </Link>
             </div>
 
             {/* Support line */}
@@ -276,13 +282,13 @@ export default function Home() {
               Get a free working prototype in 24 hours. No commitment. No pressure.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Button size="lg" className="group">
+              <CalendlyButton size="lg" className="group">
                 Start with a free working prototype
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button size="lg" variant="outline">
+              </CalendlyButton>
+              <CalendlyButton size="lg" variant="outline">
                 Book a short intro call
-              </Button>
+              </CalendlyButton>
             </div>
           </div>
         </Container>

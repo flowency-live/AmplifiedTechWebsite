@@ -1,13 +1,11 @@
+'use client'
+
 import { ArrowRight, FileText, Zap, Users, TrendingUp, Target, CheckCircle2, Sparkles } from 'lucide-react'
 import { Button } from '@/components/Button'
+import { CalendlyButton } from '@/components/CalendlyButton'
 import { Section } from '@/components/Section'
 import { Card } from '@/components/Card'
 import { Badge } from '@/components/Badge'
-
-export const metadata = {
-  title: 'About - Amplified Tech',
-  description: 'We exist to give SMEs the digital capability they never had - and the clarity they always needed.',
-}
 
 export default function AboutPage() {
   const differences = [
@@ -260,10 +258,10 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="group">
+            <CalendlyButton size="lg" className="group">
               Get your free discovery session
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            </CalendlyButton>
           </div>
           <p className="text-lg font-medium">
             <span className="gradient-text">Amplify your business.</span>
