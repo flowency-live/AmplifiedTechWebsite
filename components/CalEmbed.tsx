@@ -17,7 +17,7 @@ export function CalEmbed({
   calLink = 'flowamplified/30min',
   namespace = '30min',
   className = '',
-  config = { theme: 'dark', layout: 'month_view', hideEventTypeDetails: false },
+  config = { theme: 'dark', layout: 'column_view', hideEventTypeDetails: false },
 }: CalEmbedProps) {
   const uniqueId = useId().replace(/:/g, '-')
   const embedId = `cal-inline-${namespace}-${uniqueId}`
