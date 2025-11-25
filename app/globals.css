@@ -127,3 +127,20 @@ body:not(.calendly-popup-active) {
   width: 100% !important;
   height: 100% !important;
 }
+
+/* Cal.com dark theme overrides to match site colors */
+[data-cal-link] iframe {
+  color-scheme: dark;
+}
+
+/* Override Cal.com's default dark backgrounds with our navy theme */
+:root {
+  --cal-bg: hsl(225 71% 8%) !important;
+  --cal-bg-emphasis: hsl(225 50% 15%) !important;
+  --cal-bg-subtle: hsl(225 50% 20%) !important;
+  --cal-border: hsl(225 50% 20%) !important;
+  --cal-border-emphasis: hsl(262 83% 58% / 0.3) !important;
+  --cal-text: hsl(0 0% 98%) !important;
+  --cal-text-emphasis: hsl(0 0% 100%) !important;
+  --cal-text-muted: hsl(220 9% 66%) !important;
+}
