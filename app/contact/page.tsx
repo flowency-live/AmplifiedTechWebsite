@@ -5,7 +5,7 @@ import { Section } from '@/components/Section'
 import { Card } from '@/components/Card'
 import { Badge } from '@/components/Badge'
 import { ContactForm } from '@/components/ContactForm'
-import { CalendlyEmbed } from '@/components/CalendlyEmbed'
+import { CalEmbed } from '@/components/CalEmbed'
 
 export default function ContactPage() {
   return (
@@ -67,7 +67,12 @@ export default function ContactPage() {
                   Schedule a free discovery session or quick call at a time that suits you.
                 </p>
               </div>
-              <CalendlyEmbed minHeight="600px" />
+              <div className="min-h-[700px]">
+                <CalEmbed
+                  calLink="flow-amplified/30min"
+                  config={{ theme: 'dark', layout: 'month_view' }}
+                />
+              </div>
             </Card>
           </div>
         </div>
