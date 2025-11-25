@@ -38,27 +38,14 @@ export default function ContactPage() {
 
           {/* Stacked Layout: Calendar then Form */}
           <div className="space-y-8">
-            {/* Calendar Booking */}
-            <Card className="space-y-6">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-purple flex items-center justify-center">
-                    <Calendar className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold">Book a time</h3>
-                </div>
-                <p className="text-foreground/70">
-                  Schedule a free discovery session or quick call at a time that suits you.
-                </p>
-              </div>
-              <div className="min-h-[700px]">
-                <CalEmbed
-                  calLink="flowamplified/30min"
-                  namespace="30min"
-                  config={{ theme: 'dark', layout: 'month_view', hideEventTypeDetails: false }}
-                />
-              </div>
-            </Card>
+            {/* Calendar Booking - No Card Wrapper */}
+            <div className="min-h-[700px]">
+              <CalEmbed
+                calLink="flowamplified/30min"
+                namespace="30min"
+                config={{ theme: 'dark', layout: 'month_view', hideEventTypeDetails: false }}
+              />
+            </div>
 
             {/* Contact Form */}
             <Card className="space-y-6">
