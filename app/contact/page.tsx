@@ -28,32 +28,16 @@ export default function ContactPage() {
       <Section className="bg-navy-light" padding="lg">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold">
-              Get in <span className="gradient-text">touch</span>
+            <h2 className="text-4xl md:text-6xl font-bold">
+              Let's amplify <span className="gradient-text">your tech</span>
             </h2>
             <p className="text-xl text-foreground/60 max-w-3xl mx-auto">
               Book a time that works for you, or send us a message and we will get back within 24 hours
             </p>
           </div>
 
-          {/* Two Column Layout: Form and Calendar */}
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Contact Form */}
-            <Card className="space-y-6">
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-purple flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold">Send us a message</h3>
-                </div>
-                <p className="text-foreground/70">
-                  We will respond within 24 hours. Usually much faster.
-                </p>
-              </div>
-              <ContactForm />
-            </Card>
-
+          {/* Stacked Layout: Calendar then Form */}
+          <div className="space-y-8">
             {/* Calendar Booking */}
             <Card className="space-y-6">
               <div className="space-y-4">
@@ -74,6 +58,22 @@ export default function ContactPage() {
                   config={{ theme: 'dark', layout: 'column_view', hideEventTypeDetails: false }}
                 />
               </div>
+            </Card>
+
+            {/* Contact Form */}
+            <Card className="space-y-6">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-purple flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold">Send us a message</h3>
+                </div>
+                <p className="text-foreground/70">
+                  We will respond within 24 hours. Usually much faster.
+                </p>
+              </div>
+              <ContactForm />
             </Card>
           </div>
         </div>
