@@ -69,8 +69,9 @@ export default function ContactPage() {
               </div>
               <div className="min-h-[700px]">
                 <CalEmbed
-                  calLink="flow-amplified/30min"
-                  config={{ theme: 'dark', layout: 'month_view' }}
+                  calLink="flowamplified/30min"
+                  namespace="30min"
+                  config={{ theme: 'dark', layout: 'month_view', hideEventTypeDetails: false }}
                 />
               </div>
             </Card>

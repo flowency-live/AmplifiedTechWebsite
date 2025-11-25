@@ -1,57 +1,114 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useId } from 'react'
 
 interface CalEmbedProps {
   calLink?: string
+  namespace?: string
   className?: string
   config?: {
-    theme?: 'light' | 'dark' | 'auto'
+    theme?: 'light' | 'dark'
     layout?: 'month_view' | 'column_view'
+    hideEventTypeDetails?: boolean
   }
 }
 
 export function CalEmbed({
-  calLink = 'flow-amplified/30min',
+  calLink = 'flowamplified/30min',
+  namespace = '30min',
   className = '',
-  config = { theme: 'dark', layout: 'month_view' },
+  config = { theme: 'dark', layout: 'month_view', hideEventTypeDetails: false },
 }: CalEmbedProps) {
+  const uniqueId = useId().replace(/:/g, '-')
+  const embedId = `cal-inline-${namespace}-${uniqueId}`
+
   useEffect(() => {
-    // Check if Cal.com script already exists
-    const existingScript = document.querySelector('script[src*="cal.com/embed"]')
-    if (existingScript) {
-      return
-    }
-
-    // Load Cal.com embed script
-    const script = document.createElement('script')
-    script.src = 'https://app.cal.com/embed/embed.js'
-    script.async = true
-    script.onload = () => {
-      console.log('Cal.com embed script loaded')
-      // Initialize Cal after script loads
-      if (window.Cal) {
-        window.Cal('init', { origin: 'https://app.cal.com' })
+    // Cal.com inline embed initialization
+    const initCal = () => {
+      if (typeof window === 'undefined' || !window.Cal) {
+        return
       }
-    }
-    script.onerror = () => {
-      console.error('Failed to load Cal.com embed script')
-    }
-    document.head.appendChild(script)
 
-    return () => {
-      // Cleanup
-      const calElements = document.querySelectorAll('[data-cal-link]')
-      calElements.forEach((el) => el.remove())
+      // Initialize Cal namespace
+      window.Cal('init', namespace, { origin: 'https://app.cal.com' })
+
+      // Configure inline embed
+      window.Cal.ns[namespace]('inline', {
+        elementOrSelector: `#${embedId}`,
+        config: {
+          layout: config.layout,
+          theme: config.theme,
+        },
+        calLink: calLink,
+      })
+
+      // Configure UI with brand colors
+      window.Cal.ns[namespace]('ui', {
+        theme: config.theme,
+        cssVarsPerTheme: {
+          light: { 'cal-brand': '#a855f7' },
+          dark: { 'cal-brand': '#a855f7' },
+        },
+        hideEventTypeDetails: config.hideEventTypeDetails,
+        layout: config.layout,
+      })
     }
-  }, [])
+
+    // Load Cal.com script if not already loaded
+    const existingScript = document.querySelector('script[src*="cal.com/embed"]')
+
+    if (!existingScript) {
+      const script = document.createElement('script')
+      script.innerHTML = `
+        (function (C, A, L) {
+          let p = function (a, ar) { a.q.push(ar); };
+          let d = C.document;
+          C.Cal = C.Cal || function () {
+            let cal = C.Cal;
+            let ar = arguments;
+            if (!cal.loaded) {
+              cal.ns = {};
+              cal.q = cal.q || [];
+              d.head.appendChild(d.createElement("script")).src = A;
+              cal.loaded = true;
+            }
+            if (ar[0] === L) {
+              const api = function () { p(api, arguments); };
+              const namespace = ar[1];
+              api.q = api.q || [];
+              if(typeof namespace === "string"){
+                cal.ns[namespace] = cal.ns[namespace] || api;
+                p(cal.ns[namespace], ar);
+                p(cal, ["initNamespace", namespace]);
+              } else p(cal, ar);
+              return;
+            }
+            p(cal, ar);
+          };
+        })(window, "https://app.cal.com/embed/embed.js", "init");
+      `
+      document.head.appendChild(script)
+
+      // Wait for Cal to load, then initialize
+      const checkCal = setInterval(() => {
+        if (window.Cal) {
+          clearInterval(checkCal)
+          initCal()
+        }
+      }, 100)
+
+      return () => clearInterval(checkCal)
+    } else {
+      // Cal already loaded, initialize immediately
+      initCal()
+    }
+  }, [calLink, namespace, config, embedId])
 
   return (
     <div
+      id={embedId}
       className={className}
-      data-cal-link={calLink}
-      data-cal-config={JSON.stringify(config)}
-      style={{ width: '100%', height: '100%', overflow: 'hidden' }}
+      style={{ width: '100%', height: '100%', overflow: 'scroll' }}
     />
   )
 }
@@ -59,6 +116,6 @@ export function CalEmbed({
 // Extend Window interface for Cal
 declare global {
   interface Window {
-    Cal?: (action: string, options: any) => void
+    Cal?: any
   }
 }
