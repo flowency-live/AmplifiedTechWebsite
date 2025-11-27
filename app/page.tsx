@@ -25,13 +25,13 @@ export default function Home() {
 
             {/* Headline */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-              We build the digital capability you do not have{' '}
-              <span className="gradient-text">- fast</span>
+              Your Business Operating System{' '}
+              <span className="gradient-text">— Built Fast</span>
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-              Custom tools, automation, and dashboards for SMEs. Delivered in days using AI-assisted delivery. No spreadsheet chaos. No six-month projects.
+              Most SMEs run on spreadsheets and heroics. We build the digital capability you should have had years ago — in days, not months.
             </p>
 
             {/* CTAs */}
@@ -50,8 +50,30 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* SME CTO Positioning Section */}
+      <section className="py-16 md:py-20 bg-navy border-b border-primary/20">
+        <Container>
+          <div className="max-w-5xl mx-auto text-center space-y-8">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              We're Your <span className="gradient-text">SME CTO + Delivery Team</span>
+            </h2>
+            <div className="max-w-3xl mx-auto space-y-6">
+              <p className="text-xl md:text-2xl text-foreground/80 leading-relaxed">
+                You don't get consultants. You don't get slide decks.
+              </p>
+              <p className="text-2xl md:text-3xl font-bold gradient-text">
+                You get outcomes, capability, and digital assets.
+              </p>
+              <p className="text-lg text-foreground/70 leading-relaxed">
+                We act as the SME equivalent of an internal CTO and delivery team — bringing clarity to your operations, building the tools you're missing, and giving you the digital capability to scale fast.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
       {/* Spreadsheet CTA Section */}
-      <section className="py-16 md:py-20 bg-navy-light border-y border-primary/20">
+      <section className="py-16 md:py-20 bg-navy-light border-b border-primary/20">
         <Container>
           <div className="max-w-4xl mx-auto">
             <div className="p-8 md:p-12 rounded-3xl bg-gradient-to-r from-purple/10 via-primary/10 to-purple/10 border border-primary/30 backdrop-blur">
@@ -63,10 +85,10 @@ export default function Home() {
                 </div>
                 <div className="flex-1 text-center md:text-left space-y-4">
                   <h2 className="text-2xl md:text-3xl font-bold">
-                    Running your business on spreadsheets?
+                    Running your £3M business in Excel?
                   </h2>
                   <p className="text-lg text-foreground/70">
-                    Send us your worst one. We will show you what it could become.
+                    Send us your worst spreadsheet. We'll show you what it could become.
                   </p>
                   <a
                     href="mailto:spreadsheets@amplified.co.uk"
@@ -88,10 +110,10 @@ export default function Home() {
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-6">
               <h2 className="text-3xl md:text-5xl font-bold">
-                Problems we solve <span className="gradient-text">for SMEs</span>
+                The Real <span className="gradient-text">Problems</span>
               </h2>
               <p className="text-xl text-foreground/60">
-                You might recognise these
+                If your business is held together by good people compensating for bad systems, you'll recognize these
               </p>
             </div>
 
@@ -135,7 +157,63 @@ export default function Home() {
 
             <div className="text-center pt-8">
               <p className="text-xl font-semibold gradient-text">
-                We fix all of this quickly and without disrupting your business.
+                We fix all of this — fast, without disrupting your business.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Clarity + Speed + Capability Section */}
+      <section className="py-20 md:py-32 bg-navy-light relative overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
+
+        <Container className="relative z-10">
+          <div className="max-w-6xl mx-auto space-y-16">
+            <div className="text-center space-y-6">
+              <h2 className="text-3xl md:text-5xl font-bold">
+                <span className="gradient-text">Clarity + Speed + Capability</span>
+              </h2>
+              <p className="text-xl text-foreground/60 max-w-3xl mx-auto">
+                This is our moat. This is why we win. This is what you get.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="p-8 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 space-y-4">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-purple flex items-center justify-center">
+                  <Eye className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold">Clarity</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  You see the truth, the blockers, the priorities, the economics. Dashboards, insights, visibility, and transparency replace guesswork and firefighting.
+                </p>
+              </div>
+
+              <div className="p-8 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 space-y-4">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-purple flex items-center justify-center">
+                  <Clock className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold">Speed</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  We build in days what others take months to overthink. No bureaucracy. No endless discovery phases. No transformation theatre.
+                </p>
+              </div>
+
+              <div className="p-8 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 space-y-4">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary to-purple flex items-center justify-center">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold">Capability</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  Every engagement leaves you with a new system, not a PDF. You get tools, automation, data — real capability that makes you stronger.
+                </p>
+              </div>
+            </div>
+
+            <div className="text-center p-8 rounded-3xl bg-gradient-to-r from-purple/10 to-primary/10 border border-primary/30">
+              <p className="text-xl font-semibold">
+                Nobody else competing in SME tech even gets near this.
               </p>
             </div>
           </div>
@@ -143,7 +221,7 @@ export default function Home() {
       </section>
 
       {/* Four Core Capabilities */}
-      <section className="py-20 md:py-32 bg-gradient-to-b from-navy-light to-navy relative overflow-hidden">
+      <section className="py-20 md:py-32 bg-gradient-to-b from-navy to-navy-light relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple/10 rounded-full blur-3xl" />
 
         <Container className="relative z-10">
@@ -220,23 +298,23 @@ export default function Home() {
           <div className="max-w-5xl mx-auto space-y-12">
             <div className="text-center space-y-6">
               <h2 className="text-3xl md:text-5xl font-bold">
-                Why SMEs choose <span className="gradient-text">Amplified Tech</span>
+                Why SMEs choose <span className="gradient-text">us</span>
               </h2>
               <p className="text-xl text-foreground/60 max-w-2xl mx-auto">
-                Simple. Fast. Practical. No fluff. No corporate BS. No six-month discovery phases.
+                Days, not months. Tools, not slide decks. Capability, not consultancy.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
               {[
                 'We discover the problem and build solutions in the same session',
-                'You get a working prototype before we leave the room',
+                'You get a working prototype before you spend anything',
                 'You only pay if you want to keep it',
-                'We use AI responsibly but do not let it hallucinate or over-engineer',
+                'We use AI to build fast — but never let it over-engineer or hallucinate',
                 'We challenge assumptions and tell you the truth',
-                'We build your way - not force you into someone else framework',
-                'We focus on value, visibility and time saved',
-                'No retainers, long contracts, or hidden fees',
+                'We build your way — not force you into someone else's framework',
+                'We focus on value, visibility and time saved — not hours billed',
+                'No retainers, no long contracts, no hidden fees',
               ].map((item, i) => (
                 <div
                   key={i}
@@ -316,10 +394,10 @@ export default function Home() {
         <Container>
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-5xl font-bold">
-              Ready to upgrade <span className="gradient-text">your business?</span>
+              Ready to <span className="gradient-text">build your operating system?</span>
             </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-              Get a free working prototype in 24 hours. No commitment. No pressure.
+              Start with a free discovery session. We'll uncover what's blocking your business and build a working prototype — before you pay anything.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <CalendlyButton size="lg" className="group">

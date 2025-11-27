@@ -15,11 +15,11 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
           <Badge icon={Mail}>Contact Us</Badge>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-            Let us make your business faster, clearer, and more
-            <span className="gradient-text"> capable</span>
+            Let's move something
+            <span className="gradient-text"> forward — together</span>
           </h1>
           <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto">
-            Whether you want to fix a broken workflow, automate a painful process, replace your spreadsheets, or find out what AI can do for your business... we are ready when you are.
+            Whether you've just got a few questions or you want to explore working together, we'd love to hear from you.
           </p>
         </div>
       </Section>
@@ -31,9 +31,17 @@ export default function ContactPage() {
             <h2 className="text-4xl md:text-6xl font-bold">
               Let's amplify <span className="gradient-text">your tech</span>
             </h2>
-            <p className="text-xl text-foreground/60 max-w-3xl mx-auto">
-              Book a time that works for you, or send us a message and we will get back within 24 hours
-            </p>
+            <div className="max-w-3xl mx-auto space-y-4">
+              <p className="text-xl text-foreground/60">
+                A no-pressure conversation to uncover what's really blocking your business.
+              </p>
+              <p className="text-lg text-foreground/70">
+                We'll help you see what's possible, what it's worth, and outline a clear path forward — based on proven solutions we've seen work for others in similar situations.
+              </p>
+              <p className="text-lg font-semibold gradient-text">
+                We'll be candid about whether our approach is the right fit. Either way, you'll leave with actionable insights.
+              </p>
+            </div>
           </div>
 
           {/* Stacked Layout: Calendar then Form */}
@@ -118,18 +126,18 @@ export default function ContactPage() {
               },
               {
                 step: '2',
-                title: 'Quick discovery call or session',
-                description: 'We learn about your business, your challenges, and your goals. No sales pitch.',
+                title: 'Discovery session — not a sales call',
+                description: 'We learn about your business, uncover blockers, and map the biggest opportunities. No pitch, just clarity.',
               },
               {
                 step: '3',
-                title: 'Working prototype delivered',
-                description: 'We build something real to prove what is possible - before you pay anything.',
+                title: 'Working prototype — in the session',
+                description: 'We build something real to prove what's possible — before you spend anything.',
               },
               {
                 step: '4',
-                title: 'You decide what is next',
-                description: 'If you love it, we agree scope and timeline. If not, you walk away with a free tool.',
+                title: 'You decide what's next',
+                description: 'If you love it, we agree scope and timeline. If not, you walk away with a free tool and clear insights.',
               },
             ].map((item, i) => (
               <Card key={i} className="flex gap-6 items-start">
@@ -150,18 +158,18 @@ export default function ContactPage() {
       <Section gradient="hero" padding="lg">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-3xl md:text-5xl font-bold">
-            Start <span className="gradient-text">Today</span>
+            Digital transformation without <span className="gradient-text">the theatre</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Transformation does not need to be expensive, confusing, or slow.
+            No expensive consultancies. No six-month discovery phases. No slide decks.
           </p>
           <div className="space-y-4 text-2xl md:text-3xl font-bold">
             <div className="gradient-text">Get clarity.</div>
             <div className="gradient-text">Get capability.</div>
-            <div className="gradient-text">Get amplified.</div>
+            <div className="gradient-text">Get results.</div>
           </div>
           <p className="text-foreground/50 text-sm pt-4">
-            No commitment required. No credit card. Just value.
+            No commitment required. No sales pitch. Just value.
           </p>
         </div>
       </Section>

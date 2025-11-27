@@ -85,17 +85,17 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
           <Badge icon={Users}>About Us</Badge>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-            Amplified Tech exists to solve a <span className="gradient-text">simple problem</span>
+            We exist because digital transformation is <span className="gradient-text">broken</span>
           </h1>
           <div className="max-w-3xl mx-auto space-y-6">
             <p className="text-xl md:text-2xl text-foreground/80 font-medium">
-              Most SMEs are running multi-million-pound operations on spreadsheets, manual processes, and guesswork - and they don't have the time, capability, or confidence to modernise.
+              Most SMEs are running multi-million-pound operations on spreadsheets, manual processes, and heroic memory — and they're told that fixing it takes six months and £100k+.
             </p>
             <p className="text-2xl md:text-3xl font-bold gradient-text">
-              We fix that, fast.
+              That's nonsense. We fix it.
             </p>
             <p className="text-lg text-foreground/70 leading-relaxed">
-              We build practical AI-powered tools, dashboards, automations, and mini-ERPs that give small businesses the clarity and digital capability usually reserved for large organisations - without the cost, complexity, or consultant nonsense.
+              We build the operating system your business should have had years ago — practical tools, dashboards, automations, and mini-ERPs that give you the clarity and capability usually reserved for large organisations.
             </p>
           </div>
         </div>
@@ -107,9 +107,112 @@ export default function AboutPage() {
           <Card className="text-center space-y-4">
             <h2 className="text-2xl md:text-3xl font-bold">Our Mission</h2>
             <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
-              To give SMEs the digital capability they never had - and the clarity they've always needed - so they can grow with confidence in the AI era.
+              To give SMEs the digital capability they never had — and the clarity they've always needed — so they can grow with confidence in the AI era.
             </p>
           </Card>
+        </div>
+      </Section>
+
+      {/* Founder Story Section */}
+      <Section gradient="radial" padding="lg">
+        <div className="max-w-4xl mx-auto space-y-8">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              Why We <span className="gradient-text">Built This</span>
+            </h2>
+          </div>
+
+          <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
+            <p>
+              After 30 years building products, running operations, and fixing broken systems across startups and scale-ups, one thing became crystal clear:
+            </p>
+            <p className="text-xl font-semibold gradient-text text-center py-4">
+              Most business transformation failures aren't technical — they're human.
+            </p>
+            <p>
+              The traditional approach is fundamentally broken. Consultancies sell you strategy decks and leave. Agencies build websites without context. Dev shops write code without understanding the business. Everyone charges enterprise prices for cookie-cutter solutions.
+            </p>
+            <p>
+              Meanwhile, SMEs — the backbone of the economy — are stuck running £3M+ businesses on spreadsheets and manual processes because they're told "proper systems" cost six figures and take six months.
+            </p>
+            <p className="text-xl font-semibold">
+              That's broken. We fix it.
+            </p>
+            <p>
+              We act as your <strong>SME CTO and delivery team</strong> — bringing 30 years of experience, AI-assisted delivery, and a relentless focus on outcomes. We don't sell hours. We sell <strong>capability</strong>.
+            </p>
+            <p>
+              Every engagement delivers working tools, not PowerPoints. Every build is tailored to how you actually operate. Every prototype is free until you decide it's worth keeping.
+            </p>
+            <p className="text-center text-xl gradient-text font-semibold pt-4">
+              No theatre. No bureaucracy. Just clarity, speed, and capability.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* What We're Not Section */}
+      <Section className="bg-navy" padding="lg">
+        <div className="max-w-5xl mx-auto space-y-12">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              What We're <span className="gradient-text">Not</span>
+            </h2>
+            <p className="text-xl text-foreground/60">
+              Positioning matters. Here's what we're not:
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="space-y-4">
+              <h3 className="text-xl font-bold flex items-start gap-3">
+                <span className="text-destructive">✗</span>
+                We're not a consultancy
+              </h3>
+              <p className="text-foreground/70">
+                Consultancies sell you time, frameworks, and opinions. We sell you <strong>outcomes, capability, and digital assets</strong>. You don't get slide decks — you get working tools.
+              </p>
+            </Card>
+
+            <Card className="space-y-4">
+              <h3 className="text-xl font-bold flex items-start gap-3">
+                <span className="text-destructive">✗</span>
+                We're not an agency
+              </h3>
+              <p className="text-foreground/70">
+                Agencies build websites without understanding your operations. We build your <strong>operating system</strong> — the tools and workflows that run your entire business.
+              </p>
+            </Card>
+
+            <Card className="space-y-4">
+              <h3 className="text-xl font-bold flex items-start gap-3">
+                <span className="text-destructive">✗</span>
+                We're not a dev shop
+              </h3>
+              <p className="text-foreground/70">
+                Dev shops code to spec without context. We diagnose the real problem, design the solution, and build exactly what creates value — not what you think you need.
+              </p>
+            </Card>
+
+            <Card className="space-y-4">
+              <h3 className="text-xl font-bold flex items-start gap-3">
+                <span className="text-destructive">✗</span>
+                We're not a SaaS vendor
+              </h3>
+              <p className="text-foreground/70">
+                SaaS tools force you into their way of working. We build <strong>your system</strong> — tailored exactly to how your business operates, not someone else's template.
+              </p>
+            </Card>
+          </div>
+
+          <div className="text-center p-8 rounded-3xl bg-gradient-to-r from-purple/10 to-primary/10 border border-primary/30">
+            <p className="text-2xl font-bold">
+              We're your <span className="gradient-text">SME CTO + delivery team</span>
+            </p>
+            <p className="text-lg text-foreground/70 mt-4">
+              Building the operating system your business should have had years ago.
+            </p>
+          </div>
         </div>
       </Section>
 

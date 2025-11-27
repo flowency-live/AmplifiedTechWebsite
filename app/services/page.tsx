@@ -19,9 +19,14 @@ export default function ServicesPage() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
             Build · Automate · <span className="gradient-text">Amplify</span>
           </h1>
-          <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto">
-            We build fast, practical digital capability for SMEs. Everything is delivered through our three core service pillars.
-          </p>
+          <div className="max-w-3xl mx-auto space-y-4">
+            <p className="text-xl md:text-2xl text-foreground/70">
+              We build fast, practical digital capability for SMEs. Everything is delivered through our three core pillars.
+            </p>
+            <p className="text-xl md:text-2xl font-bold gradient-text">
+              Outcomes, not hours. Capability, not consultancy.
+            </p>
+          </div>
         </div>
       </Section>
 
@@ -39,7 +44,7 @@ export default function ServicesPage() {
               </div>
             </div>
             <p className="text-lg text-foreground/70 max-w-3xl">
-              Most SMEs don't need "enterprise software" or £50k systems. You need simple, reliable tools that match how your business actually works. We build exactly that - fast.
+              Most SMEs don't need "enterprise software" or £50k systems. You need simple, reliable tools that match how your business actually works. We build exactly that — in days, not months.
             </p>
           </div>
 
@@ -403,10 +408,10 @@ export default function ServicesPage() {
       <Section gradient="hero" padding="lg">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-3xl md:text-5xl font-bold">
-            Ready to <span className="gradient-text">amplify</span> your business?
+            Ready to <span className="gradient-text">build your operating system?</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Start with a free working prototype. We'll explore your business, find your biggest opportunities and show you what's possible - at no cost.
+            Start with a free discovery session. We'll uncover what's blocking your business, map the biggest opportunities, and build a working prototype — before you spend anything.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button size="lg" className="group">
