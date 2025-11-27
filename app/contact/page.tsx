@@ -132,11 +132,11 @@ export default function ContactPage() {
               {
                 step: '3',
                 title: 'Working prototype — in the session',
-                description: 'We build something real to prove what's possible — before you spend anything.',
+                description: "We build something real to prove what's possible — before you spend anything.",
               },
               {
                 step: '4',
-                title: 'You decide what's next',
+                title: "You decide what's next",
                 description: 'If you love it, we agree scope and timeline. If not, you walk away with a free tool and clear insights.',
               },
             ].map((item, i) => (
