@@ -62,15 +62,6 @@ export default function AboutPage() {
                   That gap is why this company exists.
                 </p>
 
-                {/* Flink Disclaimer */}
-                <div className="p-6 rounded-2xl bg-card/50 border border-primary/20 text-center">
-                  <p className="text-foreground/60 text-sm">
-                    There are other Flinks.
-                    <br />
-                    <span className="text-foreground font-semibold">None of them will rebuild your operations in a week.</span>
-                  </p>
-                </div>
-
                 <p>
                   I built something different because SMEs deserve better. They move fast. They make decisions. They don't hide behind committees. They just need someone who can match that pace and build what they actually need.
                 </p>

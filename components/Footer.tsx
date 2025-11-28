@@ -31,10 +31,10 @@ export function Footer() {
             <div className="flex items-center space-x-3">
               <img
                 src="/flink-logo.png"
-                alt="FlinkWorks"
+                alt="Flowency Build"
                 className="w-12 h-12"
               />
-              <span className="text-2xl font-bold gradient-text">FlinkWorks</span>
+              <span className="text-2xl font-bold gradient-text">Flowency Build</span>
             </div>
             <p className="text-foreground/60 max-w-md leading-relaxed">
               We act as your internal CTO and delivery team. Building the digital operating system your business should have had years ago.
@@ -124,7 +124,7 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-foreground/50 text-sm">
-              © {currentYear} FlinkWorks. All rights reserved.
+              © {currentYear} Flowency Build. All rights reserved.
             </p>
             <p className="text-foreground/50 text-sm">
               Built with Next.js, TypeScript & Tailwind CSS

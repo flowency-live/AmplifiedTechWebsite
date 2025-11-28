@@ -24,10 +24,10 @@ export function Navigation() {
           <Link href="/" className="flex items-center space-x-3 group">
             <img
               src="/flink-logo.png"
-              alt="FlinkWorks"
+              alt="Flowency Build"
               className="w-12 h-12 group-hover:scale-110 transition-transform"
             />
-            <span className="text-2xl font-bold gradient-text">FlinkWorks</span>
+            <span className="text-2xl font-bold gradient-text">Flowency Build</span>
           </Link>
 
           {/* Desktop Navigation */}

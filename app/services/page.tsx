@@ -4,7 +4,7 @@ import { CalendlyButton } from '@/components/CalendlyButton'
 import { Container } from '@/components/Container'
 
 export const metadata = {
-  title: 'Services - FlinkWorks',
+  title: 'Services - Flowency Build',
   description: 'Build, Automate, Amplify. Fast, practical digital capability for SMEs.',
 }
 
