@@ -28,14 +28,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-6">
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-purple flex items-center justify-center">
-                <span className="text-xl font-bold text-white">A</span>
-              </div>
-              <span className="text-xl font-bold gradient-text">Amplified Tech</span>
+            <div className="flex items-center space-x-3">
+              <img
+                src="/flink-logo.png"
+                alt="FlinkWorks"
+                className="w-10 h-10"
+              />
+              <span className="text-xl font-bold gradient-text">FlinkWorks</span>
             </div>
             <p className="text-foreground/60 max-w-md leading-relaxed">
-              Fast, practical digital capability for SMEs. We build the systems you don't have - and the ones you never knew were possible.
+              We act as your internal CTO and delivery team. Building the digital operating system your business should have had years ago.
             </p>
             <div className="flex items-center space-x-4">
               <a
@@ -122,7 +124,7 @@ export function Footer() {
         <div className="mt-16 pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-foreground/50 text-sm">
-              © {currentYear} Amplified Tech. All rights reserved.
+              © {currentYear} FlinkWorks. All rights reserved.
             </p>
             <p className="text-foreground/50 text-sm">
               Built with Next.js, TypeScript & Tailwind CSS

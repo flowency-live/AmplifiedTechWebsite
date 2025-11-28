@@ -21,11 +21,13 @@ export function Navigation() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-purple flex items-center justify-center group-hover:scale-110 transition-transform">
-              <span className="text-xl font-bold text-white">A</span>
-            </div>
-            <span className="text-xl font-bold gradient-text">Amplified Tech</span>
+          <Link href="/" className="flex items-center space-x-3 group">
+            <img
+              src="/flink-logo.png"
+              alt="FlinkWorks"
+              className="w-10 h-10 group-hover:scale-110 transition-transform"
+            />
+            <span className="text-xl font-bold gradient-text">FlinkWorks</span>
           </Link>
 
           {/* Desktop Navigation */}

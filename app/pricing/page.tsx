@@ -5,7 +5,7 @@ import { Card } from '@/components/Card'
 import { Badge } from '@/components/Badge'
 
 export const metadata = {
-  title: 'Pricing - Amplified Tech',
+  title: 'Pricing - FlinkWorks',
   description: 'Fast, transparent, SME-friendly pricing. You only pay for value.',
 }
 

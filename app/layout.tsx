@@ -1,23 +1,23 @@
 import type { Metadata } from "next"
-import { Outfit } from "next/font/google"
+import { Inter } from "next/font/google"
 import "./globals.css"
 import { Navigation } from "@/components/Navigation"
 import { Footer } from "@/components/Footer"
 import { CookieConsent } from "@/components/CookieConsent"
 
-const outfit = Outfit({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-inter",
   display: "swap",
 })
 
 export const metadata: Metadata = {
-  title: "Amplified Tech - Fast, Practical Digital Capability for SMEs",
-  description: "We build the digital capability you don't have - fast. From websites to internal tools, automation and dashboards - built around the way your business already works.",
-  keywords: ["SME", "digital transformation", "automation", "AI", "business tools", "dashboards"],
+  title: "FlinkWorks - Fast, Practical Digital Capability for SMEs",
+  description: "We act as your internal CTO and delivery team. Building the digital operating system your business should have had years ago. Clarity + Speed + Capability.",
+  keywords: ["SME", "digital transformation", "automation", "AI", "business operating system", "CTO"],
   icons: {
-    icon: '/icon.svg',
-    apple: '/icon.svg',
+    icon: '/flink-logo.png',
+    apple: '/flink-logo.png',
   },
   manifest: '/manifest.json',
 }
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={outfit.variable}>
+    <html lang="en" className={inter.variable}>
       <body className="antialiased">
         <Navigation />
         <div className="pt-20">
