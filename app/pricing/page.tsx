@@ -89,7 +89,7 @@ export default function PricingPage() {
       <Section className="bg-navy-light" padding="lg">
         <div className="max-w-6xl mx-auto">
           <Card className="relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -mr-32 -mt-32" />
+            <div className="absolute top-0 right-0 w-64 h-80 bg-primary/20 rounded-[3rem] blur-3xl -mr-32 -mt-32 rotate-12" />
             <div className="relative space-y-8">
               <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                 <div className="space-y-4 flex-1">

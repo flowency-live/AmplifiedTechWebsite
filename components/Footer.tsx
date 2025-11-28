@@ -32,9 +32,9 @@ export function Footer() {
               <img
                 src="/flink-logo.png"
                 alt="FlinkWorks"
-                className="w-10 h-10"
+                className="w-12 h-12"
               />
-              <span className="text-xl font-bold gradient-text">FlinkWorks</span>
+              <span className="text-2xl font-bold gradient-text">FlinkWorks</span>
             </div>
             <p className="text-foreground/60 max-w-md leading-relaxed">
               We act as your internal CTO and delivery team. Building the digital operating system your business should have had years ago.

@@ -11,9 +11,10 @@ export default function Home() {
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden bg-gradient-to-b from-navy via-navy-light to-navy">
-        {/* Gradient Orbs */}
-        <div className="absolute top-20 -right-20 w-96 h-96 bg-purple/30 rounded-full blur-3xl animate-glow" />
-        <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
+        {/* Geometric Background Elements - Echo Logo Shapes */}
+        <div className="absolute top-10 right-10 w-[500px] h-[600px] bg-gradient-to-br from-purple/20 to-primary/30 rounded-[4rem] blur-2xl rotate-12 animate-glow" />
+        <div className="absolute top-40 right-20 w-32 h-32 bg-purple/40 rounded-3xl blur-xl" />
+        <div className="absolute bottom-20 -left-20 w-[400px] h-[500px] bg-primary/20 rounded-[4rem] blur-2xl -rotate-6" />
 
         <Container className="relative z-10">
           <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in-up">
@@ -113,7 +114,7 @@ export default function Home() {
 
       {/* Your Business Operating System */}
       <section className="py-20 md:py-32 bg-navy-light relative overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[700px] bg-primary/10 rounded-[4rem] blur-3xl rotate-6" />
 
         <Container className="relative z-10">
           <div className="max-w-4xl mx-auto space-y-8">

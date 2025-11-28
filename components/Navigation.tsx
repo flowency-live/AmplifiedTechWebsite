@@ -25,9 +25,9 @@ export function Navigation() {
             <img
               src="/flink-logo.png"
               alt="FlinkWorks"
-              className="w-10 h-10 group-hover:scale-110 transition-transform"
+              className="w-12 h-12 group-hover:scale-110 transition-transform"
             />
-            <span className="text-xl font-bold gradient-text">FlinkWorks</span>
+            <span className="text-2xl font-bold gradient-text">FlinkWorks</span>
           </Link>
 
           {/* Desktop Navigation */}
